@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="146dp"
+    android:layout_height="146dp"
+    android:layout_marginTop="20dp"
+    >
+    <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="146dp"
+        android:layout_height="146dp"
+        android:src="@drawable/collection_icons"
+    />
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/collection_liked"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Любимые"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        style="@style/normal_12sp_black"
+        />
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="40dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:text="100"
+        android:background="@drawable/textview_background_oval"
+        android:gravity="center"
+        style="@style/normal_10sp_white"
+
+        />
+    </FrameLayout>
+    <ImageButton
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/trans"
+        android:text=" 111"
+        android:textColor="@color/black"
+        android:src="@drawable/collection_clear"
+        android:layout_gravity="end"
+        android:padding="6dp"
+        />
+
+</FrameLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.fragments.MainFragment"
+    android:layout_marginBottom="70dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:theme="@style/MainFragment">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recyclerPremiersTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="Премьеры" />
+
+                <Button
+                    android:id="@+id/recyclerPremiersButton"
+                    style="@style/MainFragment.button"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Все" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPremiers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recyclerPopularTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="Популярное" />
+
+                <Button
+                    android:id="@+id/recyclerPopularButton"
+                    style="@style/MainFragment.button"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Все" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPopular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recyclerSerialsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="Сериалы" />
+
+                <Button
+                    android:id="@+id/recyclerSerialsButton"
+                    style="@style/MainFragment.button"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Все" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSerials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recyclerTop250TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="Топ-250" />
+
+                <Button
+                    android:id="@+id/recyclerTop250Button"
+                    style="@style/MainFragment.button"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Все" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTop250"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recyclerRandom1TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/recyclerRandom1Button"
+                    android:gravity="center_vertical"
+                    android:text="Премьеры"
+                    android:autoSizeMinTextSize="8sp"
+                    />
+
+                <Button
+                    android:id="@+id/recyclerRandom1Button"
+                    style="@style/MainFragment.button"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Все" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRandom1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recyclerRandom2TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/recyclerRandom2Button"
+                    android:gravity="center_vertical"
+                    android:text="Премьеры"
+                    android:autoSizeMinTextSize="8sp"/>
+
+                <Button
+                    android:id="@+id/recyclerRandom2Button"
+                    style="@style/MainFragment.button"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Все" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRandom2"
+                android:layout_width="wrap_content"
+                android:layout_height="210dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="70dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".presentation.fragments.SearchSettingsFragment"
+
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Настройки поиска"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/trans"
+        android:src="@drawable/caret_left"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <TextView
+            android:id="@+id/show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Показывать"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button_toggle_group_background"
+            android:gravity="center_horizontal"
+            app:checkedButton="@id/button_toggle_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_toggle_1"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_toggle_group_background"
+                android:text="Все"
+                android:textColor="@color/button_toggle_group_textcolor"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_toggle_2"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_toggle_group_background"
+                android:text="Фильмы"
+                android:textColor="@color/button_toggle_group_textcolor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_toggle_3"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_toggle_group_background"
+                android:text="Сериалы"
+                android:textColor="@color/button_toggle_group_textcolor" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                style="@style/bold_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Страна"
+              />
+
+            <TextView
+                android:id="@+id/country"
+                style="@style/normal_14sp_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:clickable="true"
+                android:gravity="end"
+                android:text="@string/Unselected"
+                 />
+
+        </LinearLayout>
+        <View style="@style/verticalLine"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+
+                style="@style/bold_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Жанр"
+                />
+
+            <TextView
+                android:id="@+id/genre"
+                style="@style/normal_14sp_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:clickable="true"
+                android:gravity="end"
+                android:text="@string/Unselected"
+                />
+        </LinearLayout>
+        <View style="@style/verticalLine"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+
+                style="@style/bold_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Год"
+                />
+
+            <TextView
+                android:id="@+id/year"
+                style="@style/normal_14sp_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:clickable="true"
+                android:gravity="end"
+                android:text="@string/Unselected"
+                />
+        </LinearLayout>
+        <View style="@style/verticalLine"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+
+                style="@style/bold_16sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Рейтинг"
+                />
+
+            <TextView
+                android:id="@+id/rate"
+                style="@style/normal_14sp_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:clickable="true"
+                android:gravity="end"
+                android:text="любой"
+
+                />
+        </LinearLayout>
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/rangeSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:valueFrom="1"
+            android:valueTo="10"
+            android:stepSize="1"
+            app:values="@array/slider_values"
+            app:trackColorActive="@color/blue"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/slider_min"
+                style="@style/normal_14sp_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="1"
+                />
+
+            <TextView
+                android:id="@+id/slider_max"
+                style="@style/normal_14sp_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:clickable="true"
+                android:gravity="end"
+                android:text="10"
+                />
+        </LinearLayout>
+        <View style="@style/verticalLine"/>
+        <TextView
+            android:id="@+id/sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Сортировать"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroup_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button_toggle_group_background"
+            android:gravity="center_horizontal"
+            app:checkedButton="@id/button_toggle_sort_1"
+            android:layout_marginBottom="20dp"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_toggle_sort_1"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_toggle_group_background"
+                android:text="Дата"
+                android:textColor="@color/button_toggle_group_textcolor"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_toggle_sort_2"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_toggle_group_background"
+                android:text="Популярность"
+                android:textColor="@color/button_toggle_group_textcolor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_toggle_sort_3"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_toggle_group_background"
+                android:text="Рейтинг"
+                android:textColor="@color/button_toggle_group_textcolor" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+        <View style="@style/verticalLine"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"
+            >
+            <ImageView
+                android:id="@+id/icon_viewed"
+                style="@style/normal_14sp_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_search_not_viewed"
+                />
+
+            <TextView
+                android:id="@+id/text_viewed"
+                style="@style/bold_16sp_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="40dp"
+                android:clickable="true"
+                android:text="Не просмотрен"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

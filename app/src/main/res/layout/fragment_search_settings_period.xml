@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="70dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="70dp"
+    tools:context=".presentation.fragments.SearchSettingsPeriodFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Период"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/trans"
+        android:src="@drawable/caret_left"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title" />
+
+    <TextView
+        android:id="@+id/findFrom"
+        style="@style/normal_14sp_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Искать в период с"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/first_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/year_picker_background"
+        app:layout_constraintTop_toBottomOf="@id/findFrom">
+
+        <TextView
+            android:id="@+id/year_start_from"
+            style="@style/bold_16sp_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1998-2024"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/button_start_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/trans"
+            android:src="@drawable/caret_left_32x30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/year_start_from"
+            app:layout_constraintBottom_toBottomOf="@id/year_start_from"
+            android:layout_marginEnd="40dp"
+            />
+        <ImageButton
+            android:id="@+id/button_end_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/trans"
+            android:src="@drawable/caret_right_32x30"
+
+            app:layout_constraintTop_toTopOf="@id/year_start_from"
+            app:layout_constraintBottom_toBottomOf="@id/year_start_from"
+            app:layout_constraintStart_toEndOf="@id/button_start_from"
+
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/year_start_from"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/findTo"
+        style="@style/normal_14sp_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Искать в период до"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_table" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/second_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/year_picker_background"
+        app:layout_constraintTop_toBottomOf="@id/findTo">
+
+        <TextView
+            android:id="@+id/year_start_to"
+            style="@style/bold_16sp_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1998-2024"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/button_start_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/trans"
+            android:src="@drawable/caret_left_32x30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/year_start_to"
+            app:layout_constraintBottom_toBottomOf="@id/year_start_to"
+            android:layout_marginEnd="40dp"
+            />
+        <ImageButton
+            android:id="@+id/button_end_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/trans"
+            android:src="@drawable/caret_right_32x30"
+
+            app:layout_constraintTop_toTopOf="@id/year_start_to"
+            app:layout_constraintBottom_toBottomOf="@id/year_start_to"
+            app:layout_constraintStart_toEndOf="@id/button_start_to"
+
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/year_start_to"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintHorizontal_bias="0.1"
+                />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/second_table"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Выбрать"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

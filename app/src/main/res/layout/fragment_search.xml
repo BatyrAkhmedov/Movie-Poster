@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.SearchFragment"
+    android:layout_marginBottom="70dp">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cursorColor="@color/gray"
+        app:endIconDrawable="@drawable/filter_icon"
+        app:endIconMode="custom"
+        app:hintTextAppearance="@style/MyHintText"
+        app:hintTextColor="@color/gray"
+        app:startIconDrawable="@drawable/icon_search_13dp"
+
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/search_field_corners"
+
+            android:hint="Фильмы, Актёры, Режиссёры"
+            android:textColor="@color/black"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="70dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginHorizontal="20dp"
+    >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        />
+</androidx.core.widget.NestedScrollView>
+</FrameLayout>

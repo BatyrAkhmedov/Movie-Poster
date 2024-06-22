@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="70dp">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:context=".presentation.fragments.UserFragment">
+
+
+    <TextView
+        android:id="@+id/tv_viewed"
+        style="@style/bold_18sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Просмотрено"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_viewed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/tv_viewed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_viewed">
+
+        <TextView
+            android:id="@+id/tv_viewed_count"
+            style="@style/bold_14sp_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_next_small"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_viewed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_viewed"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        />
+    <TextView
+        android:id="@+id/tv_collection"
+        style="@style/bold_18sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Коллекции"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView_viewed"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/layout_create_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_collection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_plus"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Создать свою коллекцию"
+            android:layout_marginStart="8dp"
+            style="@style/normal_16sp_black"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_create_collection"
+        android:layout_marginHorizontal="20dp"
+
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:orientation="vertical"
+        />
+    <TextView
+        android:id="@+id/tv_interested"
+        style="@style/bold_18sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Вам было интересно"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView_collection"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/layout_interested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/tv_interested"
+        app:layout_constraintBottom_toBottomOf="@id/tv_interested"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_interested_count"
+            style="@style/bold_14sp_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_next_small"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_interested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layout_interested"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_interested"
+        android:layout_marginTop="8dp"
+        android:text="Очистить историю"
+        style="@style/normal_16sp_white"
+        android:backgroundTint="@color/button_enabled_selector"
+        android:textAllCaps="false"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

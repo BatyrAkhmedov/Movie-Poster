@@ -1,0 +1,72 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MoviePosters" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="fontFamily">@font/graphik_regular</item>
+
+
+    </style>
+
+    <style name="Theme.MoviePosters" parent="Base.Theme.MoviePosters" />
+    <style name="BottomNavigationView" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+    </style>
+    <style name="OnboardingSkipButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#B5B5C9</item>
+        <item name="fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <style name="OnboardingDefaultText">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">#272727</item>
+        <item name="fontFamily">@font/graphik_regular</item>
+    </style>
+    <style name="TextAppearance.Design.Tab.CustomTabLayout">
+    <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="MainFragment">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <style name="MainFragment.button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textStyle">normal</item>
+        <item name="background">@color/trans</item>
+    </style>
+
+    <style name="MainFragment.RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="FilmPage">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/filmPageImageText</item>
+    </style>
+
+    <style name="ThemeOverlay.MoviePosters.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+
+
+
+
+</resources>

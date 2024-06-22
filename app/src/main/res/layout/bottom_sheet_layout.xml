@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/collection_clear"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="20dp"
+        />
+
+    <ImageButton
+        android:id="@+id/poster"
+        android:layout_width="111dp"
+        android:layout_height="156dp"
+        android:background="@color/gray"
+        android:contentDescription="@string/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cross"
+        android:layout_marginStart="60dp"
+        />
+    <TextView
+        android:id="@+id/rate"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="@id/poster"
+        app:layout_constraintTop_toTopOf="@id/poster"
+        android:background="@drawable/round_rate"
+        android:textColor="@color/black"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textSize="6sp"
+        android:text="7.7"
+        />
+    <TextView
+        android:id="@+id/filmName"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/preview"
+        style="@style/normal_16sp_black"
+        android:autoSizeMinTextSize="10sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/poster"
+        app:layout_constraintTop_toTopOf="@id/poster"
+        app:layout_constraintBottom_toBottomOf="@id/poster"
+        app:layout_constraintVertical_bias="0.4"
+        />
+    <TextView
+        android:id="@+id/year_genres"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/filmName"
+        app:layout_constraintTop_toBottomOf="@id/filmName"
+        android:layout_marginTop="2dp"
+        android:text="@string/preview"
+        style="@style/normal_14sp_gray"
+        />
+
+    <View android:id="@+id/vertical_line_1"
+        app:layout_constraintTop_toBottomOf="@id/poster"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        style="@style/verticalLine" />
+    <LinearLayout android:id="@+id/layout_add_to_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/vertical_line_1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add_to_collection"
+        android:padding="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_collection"
+        android:layout_gravity="center"
+        style="@style/normal_16sp_black"
+        android:layout_marginStart="5dp"
+        />
+    </LinearLayout>
+
+    <View android:id="@+id/vertical_line_2"
+        app:layout_constraintTop_toBottomOf="@id/layout_add_to_collection"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        style="@style/verticalLine" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/vertical_line_2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+    <LinearLayout
+        android:id="@+id/layout_create_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_plus"
+            android:padding="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Создать свою коллекцию"
+            android:layout_gravity="center"
+            style="@style/normal_16sp_black"
+            android:layout_marginStart="5dp"
+            />
+
+    </LinearLayout>
+
+    <View android:id="@+id/vertical_line_3"
+        app:layout_constraintTop_toBottomOf="@id/layout_create_collection"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        style="@style/verticalLine"
+       />
+    <View android:id="@+id/space"
+        app:layout_constraintTop_toBottomOf="@id/vertical_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

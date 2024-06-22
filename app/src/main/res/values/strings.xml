@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Movie Posters</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="preview">Preview</string>
+    <string name="onboardingText">Skillcinema</string>
+    <string name="onboardind_page1">Узнавай о премьерах</string>
+    <string name="onboardind_page2">Создавай коллекции</string>
+    <string name="onboardind_page3">Делись с друзьями</string>
+    <string name="onboarding_skipButton">Пропустить</string>
+    <string name="title">Сериалы</string>
+    <string name="image">image</string>
+    <string name="short_description">short_description</string>
+    <string name="description">description</string>
+    <string name="serials">Сезоны и серии:</string>
+    <string name="Premiers">Премьеры</string>
+    <string name="Popular">Популярное</string>
+    <string name="Top_250">Топ-250</string>
+    <string name="Serials">Сериалы</string>
+    <string name="random1">Random1</string>
+    <string name="random2">Random2</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="listActors">Список актеров</string>
+    <string name="listStaff">Список персонала</string>
+    <string name="best_films_from_actor_page">BestFilms</string>
+    <string name="singleimagefullscreenfragment">SingleImage</string>
+    <string name="similars">Similars</string>
+    <string name="similar_rus">Похожие фильмы</string>
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="Unselected">Не выбрано</string>
+    <string name="test">Test</string>
+    <string name="interestedFilms">Вам было интересно</string>
+    <string name="selectedcollection">selectedCollection</string>
+    <string name="likedFilms">Любимые</string>
+    <string name="favorites_films">Хочу посмотреть</string>
+    <string name="viewed_films">Просмотрено</string>
+    <string name="add_to_collection">Добавить в коллекцию</string>
+</resources>
